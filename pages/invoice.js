@@ -6,7 +6,9 @@ import DarkmodeToggle from '@/components/UI/DarkmodeToggle';
 export default function Home() {
   return (
     <PageShell>
-      <Heading fontSize="30px">Children</Heading>
+      <Heading>Invoice</Heading>
+      <DarkmodeToggle />
+      <Button colorScheme="blue">Suppp</Button>
     </PageShell>
   );
 }
