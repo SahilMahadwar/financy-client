@@ -6,8 +6,10 @@ import Layout from '@/components/Layout';
 
 export default function Home() {
   return (
-    <Layout title="Manage Clients">
-      <Heading fontSize="30px">Clients</Heading>
-    </Layout>
+    <PageShell>
+      <Layout>
+        <Heading fontSize="30px">Account Setting Page</Heading>
+      </Layout>
+    </PageShell>
   );
 }

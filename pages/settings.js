@@ -1,14 +1,12 @@
 import React from 'react';
-import { Box, Heading, Button } from '@chakra-ui/react';
 import PageShell from '@/components/PageShell/PageShell';
-import DarkmodeToggle from '@/components/UI/DarkmodeToggle';
+import Layout from '@/components/Layout';
+import { Button, Heading } from '@chakra-ui/react';
 
 export default function Home() {
   return (
-    <PageShell>
-      <Heading>Settings</Heading>
-      <DarkmodeToggle />
-      <Button colorScheme="blue">Suppp</Button>
-    </PageShell>
+    <Layout title="Account Settings">
+      <Heading fontSize="30px">This is Settings Page</Heading>
+    </Layout>
   );
 }

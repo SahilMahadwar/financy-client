@@ -1,12 +1,17 @@
-import React from 'react';
-import { Box, Heading, Button } from '@chakra-ui/react';
-import PageShell from '@/components/PageShell/PageShell';
-import DarkmodeToggle from '@/components/UI/DarkmodeToggle';
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Layout from '@/components/Layout';
 
-export default function Home() {
+export default function Index() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/home');
+  }, []);
+
   return (
-    <PageShell>
-      <Heading fontSize="30px">Children</Heading>
-    </PageShell>
+    <Layout title="Redericting to Home">
+      <div>Redirecting</div>
+    </Layout>
   );
 }

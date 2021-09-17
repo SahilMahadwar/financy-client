@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, useColorModeValue } from '@chakra-ui/react';
 
 export default function SideBarButton({ children, icon, isActive, onClick }) {
-  const Bg = useColorModeValue('blue.500', 'gray.700');
+  const Bg = useColorModeValue('teal.500', 'gray.700');
   const Color = useColorModeValue('gray.600', 'gray.400');
 
   return (

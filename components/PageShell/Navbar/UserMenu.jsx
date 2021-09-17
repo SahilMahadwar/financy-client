@@ -21,12 +21,12 @@ import {
   Button,
   MenuGroup,
 } from '@chakra-ui/react';
-
+import AuthContext from '@/contexts/AuthContext';
 import { DropdownArrowIcon } from '@/components/UI/Icons';
 
 export default function UserMenu() {
   const { colorMode, toggleColorMode } = useColorMode();
-
+  const { logout } = useContext(AuthContext);
   const [isOpen, setIsOpen] = useState(false);
   const onClose = () => setIsOpen(false);
   const cancelRef = useRef();
@@ -64,8 +64,8 @@ export default function UserMenu() {
             boxShadow: 'none',
           }}
         />
-        <MenuList>
-          <MenuGroup title="Theme">
+        <MenuList boxShadow="none" minWidth="180px" fontSize="14px">
+          <MenuOptionGroup id="newtvab" title="Theme" type="checkbox">
             <Flex mb="15px" px="16px" justify="space-between">
               <Text fontSize="14px" fontWeight="normal">
                 Darkmode
@@ -75,7 +75,13 @@ export default function UserMenu() {
                 onChange={toggleColorMode}
               />
             </Flex>
-          </MenuGroup>
+          </MenuOptionGroup>
+          <MenuDivider />
+          <MenuItem id="newtab">New Tab</MenuItem>
+          <MenuItem id="newtasdab">New Window</MenuItem>
+          <MenuItem id="newtaasdbb" onClick={() => setIsOpen(true)}>
+            Logout
+          </MenuItem>
         </MenuList>
       </Menu>
 

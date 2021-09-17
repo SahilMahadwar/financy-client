@@ -1,6 +1,7 @@
 import React from 'react';
 import { Flex, Box, Button, useColorModeValue } from '@chakra-ui/react';
-import UserMenu from './UserMenu';
+
+import UserMenu from '@/components/PageShell/Navbar/UserMenu';
 
 export default function SideBarButton() {
   const BorderColor = useColorModeValue('gray.200', 'gray.700');
