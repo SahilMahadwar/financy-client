@@ -9,6 +9,8 @@ import {
   RiUser3Line,
   RiFileTextLine,
   RiMoneyDollarBoxLine,
+  RiCloseCircleLine,
+  RiCloseFill,
 } from 'react-icons/ri';
 
 export function HomeIcon({ color }) {
@@ -39,6 +41,10 @@ export function HelpIcon({ color }) {
 
 export function DropdownArrowIcon({ color }) {
   return <Icon w="18px" h="18px" color={color} as={RiArrowDownSLine} />;
+}
+
+export function CloseIcon({ color }) {
+  return <Icon w="22px" h="22px" color={color} as={RiCloseFill} />;
 }
 
 export function LogoIcon({ color }) {

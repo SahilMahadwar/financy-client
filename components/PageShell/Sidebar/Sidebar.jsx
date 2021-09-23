@@ -1,5 +1,12 @@
 import React from 'react';
-import { Box, Flex, VStack, Button, useColorModeValue } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  VStack,
+  Button,
+  useColorModeValue,
+  useDisclosure,
+} from '@chakra-ui/react';
 import SideBarButton from '../Buttons/SideBarButton';
 import { useRouter } from 'next/router';
 import Logo from '../../UI/Logo';
@@ -12,8 +19,11 @@ import {
   EstimatesIcon,
 } from '@/components/UI/Icons';
 import SidebarNav from './SidebarNav';
+import CreateInvoiceDrawer from '@/components/CreateInvoice/CreateInvoiceDrawer';
 
 export default function Sidebar() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const router = useRouter();
   const Bg = useColorModeValue('gray.50', 'gray.800');
   const BorderColor = useColorModeValue('gray.200', 'gray.700');
@@ -41,10 +51,13 @@ export default function Sidebar() {
           variant="outline"
           size="sm"
           w="100%"
+          onClick={() => onOpen()}
         >
           Create New Invoice
         </Button>
+        <CreateInvoiceDrawer onClose={onClose} isOpen={isOpen} />
       </Box>
+
       <SidebarNav />
     </Flex>
   );
